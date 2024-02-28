@@ -1,0 +1,8 @@
+# Example code for histogram
+import matplotlib.pyplot as plt
+
+plt.hist(df['variable_of_interest'], bins=10, color='blue', edgecolor='black')
+plt.title('Distribution of Variable of Interest')
+plt.xlabel('Variable Values')
+plt.ylabel('Frequency')
+plt.show()
