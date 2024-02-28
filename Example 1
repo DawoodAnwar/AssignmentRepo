@@ -7,28 +7,4 @@ df = pd.read_csv('your_dataset.csv')
 # Display statistical summary
 stat_summary = df.describe()
 print(stat_summary)
-# Example code
-correlation_matrix = df.corr()
 
-# Display correlation matrix
-print(correlation_matrix)
-# Example code for histogram
-import matplotlib.pyplot as plt
-
-plt.hist(df['variable_of_interest'], bins=10, color='blue', edgecolor='black')
-plt.title('Distribution of Variable of Interest')
-plt.xlabel('Variable Values')
-plt.ylabel('Frequency')
-plt.show()
-# Example code for scatter plot
-plt.scatter(df['variable1'], df['variable2'], color='green')
-plt.title('Scatter Plot of Variable1 vs Variable2')
-plt.xlabel('Variable1')
-plt.ylabel('Variable2')
-plt.show()
- # Example code for heatmap
-import seaborn as sns
-
-sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
-plt.title('Correlation Heatmap')
-plt.show()
