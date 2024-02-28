@@ -1,8 +1,17 @@
-# Example code for histogram
+import pandas as pd
 import matplotlib.pyplot as plt
 
-plt.hist(df['variable_of_interest'], bins=10, color='blue', edgecolor='black')
-plt.title('Distribution of Variable of Interest')
-plt.xlabel('Variable Values')
+# Create a DataFrame from the provided data
+data = {
+    'Country Name': ['Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', ...],
+    'Inflation rate (2024)': [4, 6.8, 3.5, 22.3, 2.9, 93.7, ...]
+}
+df = pd.DataFrame(data)
+
+# Plot the histogram of the inflation rates
+plt.hist(df['Inflation rate (2024)'], bins=10, color='blue', edgecolor='black')
+plt.title('Distribution of Inflation Rates for 2024')
+plt.xlabel('Inflation Rate (%)')
 plt.ylabel('Frequency')
 plt.show()
+
