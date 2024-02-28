@@ -1,6 +1,23 @@
-# Example code for heatmap
 import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
 
+# Update the DataFrame to include the simulated GDP growth rates
+data_subset = {
+    'Country Name': ['Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina'],
+    'Inflation rate (2024)': [4, 6.8, 3.5, 22.3, 2.9, 93.7],
+    'GDP Growth Rate (2024)': np.random.uniform(-2, 8, 6)  # Assuming these are the simulated GDP growth rates
+}
+df_subset = pd.DataFrame(data_subset)
+
+# Drop the 'Country Name' column for correlation calculation
+df_numerical = df_subset.drop('Country Name', axis=1)
+
+# Calculate the correlation matrix
+correlation_matrix = df_numerical.corr()
+
+# Generate a heatmap for the correlation matrix
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
-plt.title('Correlation Heatmap')
+plt.title('Correlation Heatmap between Inflation Rate and GDP Growth Rate (2024)')
 plt.show()
