@@ -1,6 +1,20 @@
-# Example code for scatter plot
-plt.scatter(df['variable1'], df['variable2'], color='green')
-plt.title('Scatter Plot of Variable1 vs Variable2')
-plt.xlabel('Variable1')
-plt.ylabel('Variable2')
+# Import necessary libraries
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+# Data for a subset of countries, their inflation rates in 2024, and simulated GDP growth rates
+data_subset = {
+    'Country Name': ['Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina'],
+    'Inflation rate (2024)': [4, 6.8, 3.5, 22.3, 2.9, 93.7],
+    'GDP Growth Rate (2024)': np.random.uniform(-2, 8, 6)  # Simulated GDP growth rates
+}
+df_subset = pd.DataFrame(data_subset)
+
+# Generate a scatter plot
+plt.scatter(df_subset['Inflation rate (2024)'], df_subset['GDP Growth Rate (2024)'], color='green')
+plt.title('Scatter Plot of Inflation Rate vs GDP Growth Rate (2024)')
+plt.xlabel('Inflation Rate (%)')
+plt.ylabel('GDP Growth Rate (%)')
+plt.grid(True)
 plt.show()
