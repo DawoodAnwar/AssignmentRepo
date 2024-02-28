@@ -1,0 +1,6 @@
+# Example code for heatmap
+import seaborn as sns
+
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.title('Correlation Heatmap')
+plt.show()
