@@ -1,1 +1,7 @@
+# Example code
+correlation_matrix = df.corr()
+
+# Display correlation matrix
+print(correlation_matrix)
+
 
