@@ -1,10 +1,15 @@
-# Example code
 import pandas as pd
+import numpy as np
 
-# Load dataset
-df = pd.read_csv('your_dataset.csv')
+# Simulate dataset
+data = {
+    'Age': np.random.randint(18, 65, size=100),
+    'Salary': np.random.randint(50000, 150000, size=100),
+    'YearsExperience': np.random.uniform(1, 30, size=100)
+}
+
+df = pd.DataFrame(data)
 
 # Display statistical summary
 stat_summary = df.describe()
 print(stat_summary)
-
