@@ -1,0 +1,6 @@
+# Example code for scatter plot
+plt.scatter(df['variable1'], df['variable2'], color='green')
+plt.title('Scatter Plot of Variable1 vs Variable2')
+plt.xlabel('Variable1')
+plt.ylabel('Variable2')
+plt.show()
